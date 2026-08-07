@@ -1,0 +1,11 @@
+scenario_id,frame_index,timestamp_seconds,processed_successfully,status,severity,detection_count,helmet_count,no_helmet_count,inference_time_ms,annotated_image_path,error
+1,0,0.0,True,COMPLIANT,NONE,3,3,0,12.12,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_01_frame_0.jpg,
+2,232,7.74,True,COMPLIANT,NONE,3,3,0,12.22,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_02_frame_232.jpg,
+3,465,15.52,True,REVIEW_REQUIRED,MEDIUM,0,0,0,11.49,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_03_frame_465.jpg,
+4,698,23.29,True,VIOLATION,HIGH,4,3,1,12.16,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_04_frame_698.jpg,
+5,931,31.06,True,VIOLATION,HIGH,2,0,2,11.89,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_05_frame_931.jpg,
+6,1164,38.84,True,COMPLIANT,NONE,2,2,0,11.85,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_06_frame_1164.jpg,
+7,1397,46.61,True,COMPLIANT,NONE,1,1,0,11.39,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_07_frame_1397.jpg,
+8,1630,54.39,True,COMPLIANT,NONE,1,1,0,11.43,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_08_frame_1630.jpg,
+9,1863,62.16,True,COMPLIANT,NONE,2,2,0,11.37,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_09_frame_1863.jpg,
+10,2096,69.94,True,REVIEW_REQUIRED,MEDIUM,0,0,0,11.21,/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_10_frame_2096.jpg,

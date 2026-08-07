@@ -1,0 +1,97 @@
+{
+    "run_information": {
+        "run_id": "20260805_063043",
+        "timestamp": "2026-08-05T06:31:20.889821",
+        "agent": "PPE Compliance Agent",
+        "version": "1.0"
+    },
+    "input": {
+        "video_file": "ppe_compliance_demo.mp4",
+        "image_folder": "/content/drive/MyDrive/PPE_Compliance_Check/data/sample/images",
+        "video_resolution": "640 x 360",
+        "video_fps": 29.97,
+        "video_frames": 2098,
+        "video_duration_seconds": 70.0
+    },
+    "model": {
+        "model_path": "/content/drive/MyDrive/PPE_Compliance_Check/results/yolo11_ppe_training_gpu_fixed_labels/weights/best.pt",
+        "device": "GPU",
+        "image_size": 640,
+        "confidence_threshold": 0.3,
+        "classes": {
+            "0": "helmet",
+            "1": "no_helmet"
+        }
+    },
+    "perception": {
+        "detections": 3,
+        "inference_time_ms": 133.1,
+        "structured_detections": [
+            {
+                "detection_id": 1,
+                "class_id": 1,
+                "class_name": "helmet",
+                "confidence": 0.6806,
+                "bbox_xyxy": [
+                    154.55,
+                    218.31,
+                    216.92,
+                    267.27
+                ]
+            },
+            {
+                "detection_id": 2,
+                "class_id": 1,
+                "class_name": "helmet",
+                "confidence": 0.5219,
+                "bbox_xyxy": [
+                    420.23,
+                    232.47,
+                    449.65,
+                    262.6
+                ]
+            },
+            {
+                "detection_id": 3,
+                "class_id": 1,
+                "class_name": "helmet",
+                "confidence": 0.394,
+                "bbox_xyxy": [
+                    444.31,
+                    232.01,
+                    472.28,
+                    260.02
+                ]
+            }
+        ]
+    },
+    "reasoning": {
+        "timestamp": "2026-08-05T06:31:11.276821",
+        "status": "COMPLIANT",
+        "severity": "NONE",
+        "reason": "3 helmet detection(s) were found and no no_helmet detections were identified.",
+        "recommended_action": "Save the result as compliant evidence.",
+        "counts": {
+            "total_detections": 3,
+            "helmet": 3,
+            "no_helmet": 0,
+            "unknown": 0
+        },
+        "violation_detection_ids": [],
+        "decision_rules": [
+            "Any no_helmet detection produces a VIOLATION.",
+            "Helmet detections without no_helmet produce COMPLIANT.",
+            "No detections produce REVIEW_REQUIRED."
+        ]
+    },
+    "actions": {
+        "annotated_image": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/images/20260805_063043_ppe_compliance_demo_first_frame_annotated.jpg",
+        "evidence_image": null,
+        "json_report": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/reports/20260805_063043_ppe_compliance_demo_first_frame_report.json"
+    },
+    "summary": {
+        "status": "COMPLIANT",
+        "severity": "NONE",
+        "completed": true
+    }
+}

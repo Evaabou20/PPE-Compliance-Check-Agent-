@@ -1,0 +1,451 @@
+{
+    "run_id": "20260805_063043",
+    "created_at": "2026-08-05T06:31:28.755344",
+    "video": "/content/drive/MyDrive/PPE_Compliance_Check/data/sample/videos/ppe_compliance_demo.mp4",
+    "scenarios_requested": 10,
+    "scenarios_processed_successfully": 10,
+    "processing_errors": 0,
+    "processing_success_rate_percent": 100.0,
+    "compliant_scenarios": 6,
+    "violation_scenarios": 2,
+    "review_required_scenarios": 2,
+    "average_inference_time_ms": 11.71,
+    "total_evaluation_time_seconds": 0.81,
+    "accuracy_note": "Prediction accuracy was not calculated because manual ground-truth labels have not yet been added.",
+    "scenarios": [
+        {
+            "scenario_id": 1,
+            "frame_index": 0,
+            "timestamp_seconds": 0.0,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 3,
+            "helmet_count": 3,
+            "no_helmet_count": 0,
+            "status": "COMPLIANT",
+            "severity": "NONE",
+            "reason": "3 helmet detection(s) were found and no no_helmet detections were identified.",
+            "inference_time_ms": 12.12,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.6806,
+                    "bbox_xyxy": [
+                        154.55,
+                        218.31,
+                        216.92,
+                        267.27
+                    ]
+                },
+                {
+                    "detection_id": 2,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.5219,
+                    "bbox_xyxy": [
+                        420.23,
+                        232.47,
+                        449.65,
+                        262.6
+                    ]
+                },
+                {
+                    "detection_id": 3,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.394,
+                    "bbox_xyxy": [
+                        444.31,
+                        232.01,
+                        472.28,
+                        260.02
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_01_frame_0.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 2,
+            "frame_index": 232,
+            "timestamp_seconds": 7.74,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 3,
+            "helmet_count": 3,
+            "no_helmet_count": 0,
+            "status": "COMPLIANT",
+            "severity": "NONE",
+            "reason": "3 helmet detection(s) were found and no no_helmet detections were identified.",
+            "inference_time_ms": 12.22,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.6415,
+                    "bbox_xyxy": [
+                        203.26,
+                        266.59,
+                        232.8,
+                        303.96
+                    ]
+                },
+                {
+                    "detection_id": 2,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.514,
+                    "bbox_xyxy": [
+                        214.09,
+                        237.73,
+                        236.8,
+                        261.64
+                    ]
+                },
+                {
+                    "detection_id": 3,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.3931,
+                    "bbox_xyxy": [
+                        404.31,
+                        253.58,
+                        423.72,
+                        272.05
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_02_frame_232.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 3,
+            "frame_index": 465,
+            "timestamp_seconds": 15.52,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 0,
+            "helmet_count": 0,
+            "no_helmet_count": 0,
+            "status": "REVIEW_REQUIRED",
+            "severity": "MEDIUM",
+            "reason": "No helmet or no_helmet detections were found. The scene cannot be classified confidently.",
+            "inference_time_ms": 11.49,
+            "detections": [],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_03_frame_465.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 4,
+            "frame_index": 698,
+            "timestamp_seconds": 23.29,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 4,
+            "helmet_count": 3,
+            "no_helmet_count": 1,
+            "status": "VIOLATION",
+            "severity": "HIGH",
+            "reason": "1 no_helmet detection(s) were found. At least one worker may not be wearing the required head protection.",
+            "inference_time_ms": 12.16,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8445,
+                    "bbox_xyxy": [
+                        386.39,
+                        57.04,
+                        442.72,
+                        125.55
+                    ]
+                },
+                {
+                    "detection_id": 2,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8413,
+                    "bbox_xyxy": [
+                        305.06,
+                        54.16,
+                        352.46,
+                        112.02
+                    ]
+                },
+                {
+                    "detection_id": 3,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8038,
+                    "bbox_xyxy": [
+                        594.39,
+                        36.17,
+                        637.31,
+                        93.64
+                    ]
+                },
+                {
+                    "detection_id": 4,
+                    "class_id": 0,
+                    "class_name": "no_helmet",
+                    "confidence": 0.7066,
+                    "bbox_xyxy": [
+                        524.62,
+                        83.64,
+                        552.83,
+                        118.23
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_04_frame_698.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 5,
+            "frame_index": 931,
+            "timestamp_seconds": 31.06,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 2,
+            "helmet_count": 0,
+            "no_helmet_count": 2,
+            "status": "VIOLATION",
+            "severity": "HIGH",
+            "reason": "2 no_helmet detection(s) were found. At least one worker may not be wearing the required head protection.",
+            "inference_time_ms": 11.89,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 0,
+                    "class_name": "no_helmet",
+                    "confidence": 0.6592,
+                    "bbox_xyxy": [
+                        514.72,
+                        198.86,
+                        562.06,
+                        242.98
+                    ]
+                },
+                {
+                    "detection_id": 2,
+                    "class_id": 0,
+                    "class_name": "no_helmet",
+                    "confidence": 0.308,
+                    "bbox_xyxy": [
+                        109.44,
+                        98.52,
+                        166.75,
+                        152.64
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_05_frame_931.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 6,
+            "frame_index": 1164,
+            "timestamp_seconds": 38.84,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 2,
+            "helmet_count": 2,
+            "no_helmet_count": 0,
+            "status": "COMPLIANT",
+            "severity": "NONE",
+            "reason": "2 helmet detection(s) were found and no no_helmet detections were identified.",
+            "inference_time_ms": 11.85,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8445,
+                    "bbox_xyxy": [
+                        71.71,
+                        81.64,
+                        112.98,
+                        140.87
+                    ]
+                },
+                {
+                    "detection_id": 2,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8218,
+                    "bbox_xyxy": [
+                        264.29,
+                        124.52,
+                        306.0,
+                        180.96
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_06_frame_1164.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 7,
+            "frame_index": 1397,
+            "timestamp_seconds": 46.61,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 1,
+            "helmet_count": 1,
+            "no_helmet_count": 0,
+            "status": "COMPLIANT",
+            "severity": "NONE",
+            "reason": "1 helmet detection(s) were found and no no_helmet detections were identified.",
+            "inference_time_ms": 11.39,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8177,
+                    "bbox_xyxy": [
+                        138.25,
+                        169.76,
+                        262.26,
+                        296.7
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_07_frame_1397.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 8,
+            "frame_index": 1630,
+            "timestamp_seconds": 54.39,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 1,
+            "helmet_count": 1,
+            "no_helmet_count": 0,
+            "status": "COMPLIANT",
+            "severity": "NONE",
+            "reason": "1 helmet detection(s) were found and no no_helmet detections were identified.",
+            "inference_time_ms": 11.43,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.8059,
+                    "bbox_xyxy": [
+                        177.72,
+                        0.96,
+                        261.02,
+                        82.43
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_08_frame_1630.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 9,
+            "frame_index": 1863,
+            "timestamp_seconds": 62.16,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 2,
+            "helmet_count": 2,
+            "no_helmet_count": 0,
+            "status": "COMPLIANT",
+            "severity": "NONE",
+            "reason": "2 helmet detection(s) were found and no no_helmet detections were identified.",
+            "inference_time_ms": 11.37,
+            "detections": [
+                {
+                    "detection_id": 1,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.4914,
+                    "bbox_xyxy": [
+                        490.99,
+                        92.59,
+                        503.41,
+                        106.31
+                    ]
+                },
+                {
+                    "detection_id": 2,
+                    "class_id": 1,
+                    "class_name": "helmet",
+                    "confidence": 0.4807,
+                    "bbox_xyxy": [
+                        464.89,
+                        84.25,
+                        479.13,
+                        100.67
+                    ]
+                }
+            ],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_09_frame_1863.jpg",
+            "error": null
+        },
+        {
+            "scenario_id": 10,
+            "frame_index": 2096,
+            "timestamp_seconds": 69.94,
+            "processed_successfully": true,
+            "original_shape": [
+                360,
+                640,
+                3
+            ],
+            "detection_count": 0,
+            "helmet_count": 0,
+            "no_helmet_count": 0,
+            "status": "REVIEW_REQUIRED",
+            "severity": "MEDIUM",
+            "reason": "No helmet or no_helmet detections were found. The scene cannot be classified confidently.",
+            "inference_time_ms": 11.21,
+            "detections": [],
+            "annotated_image_path": "/content/drive/MyDrive/PPE_Compliance_Check/final_agent_results/evaluation/images/20260805_063043_scenario_10_frame_2096.jpg",
+            "error": null
+        }
+    ]
+}
