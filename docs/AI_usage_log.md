@@ -52,8 +52,33 @@ AI provided guidance for:
 
 ## Student Contribution
 
-All project implementation, notebook execution, model training, testing, evaluation, and final verification were completed by the student. AI assistance was used to improve documentation, organization, debugging support, and repository presentation.
+The overall project design, dataset preparation, model training, notebook execution, testing, evaluation, debugging decisions, and final verification were completed by the student.
+
+AI assistance was primarily used as a learning resource to explain concepts, troubleshoot errors, improve documentation, and organize the GitHub repository. All AI-generated suggestions were reviewed, tested, and modified when necessary before being incorporated into the final project.
+
+## What I Learned
+
+Throughout this project I gained experience in:
+
+- Building an end-to-end computer vision agent
+- Training and evaluating a custom YOLO11 model
+- Organizing a professional GitHub repository
+- Documenting AI projects for reproducibility
+- Debugging complex notebook and deployment issues
+- Using AI responsibly as a development assistant rather than a replacement for independent work
+
+## Estimated AI Contribution
+
+The majority of the project implementation, testing, evaluation, and final verification were completed independently by the student.
+
+AI assistance was primarily used for:
+
+- Explaining concepts
+- Troubleshooting errors
+- Improving documentation
+- Organizing the GitHub repository
+- Providing guidance during development
 
 ## Verification
 
-The final repository, notebook, generated outputs, and documentation were reviewed by the student before submission.
+The final notebook, repository structure, generated outputs, documentation, and evaluation results were reviewed and verified by the student before submission.
