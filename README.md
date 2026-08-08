@@ -256,46 +256,45 @@ Representative outputs are available in the `results` folder.
 
 **Input**
 
-```
-Sample PPE image
+```text
+Compliant PPE sample image
 ```
 
 ↓
 
 **Perception**
 
-```
+```text
 YOLO11 detects:
-- Person
-- Helmet
+- 2 helmets
+- 0 no-helmet detections
 ```
 
 ↓
 
 **Reasoning**
 
-```
-Helmet detected.
-
-Compliance rules satisfied.
+```text
+Helmet detections are present.
+No no-helmet detections were identified.
+Compliance rules are satisfied.
 ```
 
 ↓
 
 **Decision**
 
-```
-Worker classified as COMPLIANT.
+```text
+Status: COMPLIANT
 ```
 
 ↓
 
 **Action**
 
-```
-- Annotated image generated
+```text
+- Annotated evidence generated
 - JSON report saved
-- Evaluation metrics updated
 - Execution trace recorded
 ```
 
