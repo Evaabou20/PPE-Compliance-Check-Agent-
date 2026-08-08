@@ -69,7 +69,7 @@ The PPE Compliance Check Agent is an end-to-end AI system that integrates comput
 
 ### 1. Input Ingestion
 
-The agent accepts images and videos provided by the user for PPE compliance analysis.
+The agent accepts batches of images and MP4 video for PPE compliance analysis. Representative sample inputs are provided under data/sample/.
 
 ### 2. Input Validation
 
@@ -110,14 +110,23 @@ The complete pipeline supports continuous monitoring of PPE compliance from vide
 | Component | Responsibility |
 |----------|----------------|
 | Input Manager | Receives images and videos |
-| YOLO11 Detector | Detects helmets and workers |
+| YOLO11 Detector | Detects helmet and no_helmet classes |
 | Reasoning Engine | Determines compliance status |
 | Report Generator | Produces annotated outputs and JSON reports |
 | Trace Logger | Records execution history |
 | Evaluation Module | Measures system performance |
 
 ---
+## Repository Integration
+
+The final PPE Compliance Agent uses repository-based paths for reproducibility.
+
+- Pretrained model: `models/best.pt`
+- Sample inputs: `data/sample/`
+- Generated outputs: `results/`
+
+The final agent pipeline can therefore operate from the cloned GitHub repository without depending on developer-specific Google Drive paths.
 
 ## Overall Workflow
 
-The PPE Compliance Check Agent combines perception, reasoning, action, and evaluation into a complete autonomous computer vision pipeline capable of monitoring PPE compliance while producing reproducible outputs and detailed execution records.
+The PPE Compliance Check Agent combines perception, reasoning, action, and evaluation into a complete autonomous computer vision pipeline capable of monitoring PPE compliance while producing reproducible outputs and detailed execution records. 
