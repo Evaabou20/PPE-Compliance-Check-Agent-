@@ -136,31 +136,84 @@ PPE-Compliance-Check-Agent/
 
 ---
 
-## Installation
+## Installation & Reproducibility
 
-1. Clone this repository.
+The project has been verified in a fresh Google Colab environment to confirm that the core PPE Compliance Agent workflow is reproducible.
+
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/Evaabou20/PPE-Compliance-Check-Agent-.git
+cd PPE-Compliance-Check-Agent-
 ```
 
-2. Install the required packages.
+### 2. Install Dependencies
+
+Install the pinned project dependencies:
 
 ```bash
 pip install -r requirements.txt
 ```
 
-3. Open the notebook:
+### 3. Download the Trained YOLO11 Model
+
+The trained YOLO11 weights (`best.pt`) are hosted externally to keep the repository lightweight.
+
+[Download best.pt from Google Drive](https://drive.google.com/file/d/1kmJXMGUUwuhxe7IGcxgp0IkeUppP-7lY/view?usp=sharing)
+
+After downloading, place the model at:
+
+```text
+models/best.pt
+```
+
+The model can also be reproduced from scratch by running the dataset setup and training sections of the final notebook.
+
+### 4. Open the Final Notebook
+
+The final project notebook is located at:
 
 ```text
 notebooks/ITAI1378_Final_PPE_Compliance_Check_.ipynb
 ```
 
-4. Mount Google Drive if running in Google Colab.
+The repository includes sample inputs under:
 
-5. Update dataset and model paths if necessary.
+```text
+data/sample/
+```
 
-6. Run the notebook from beginning to end.
+These samples allow the PPE compliance pipeline to be tested without requiring additional user-provided data.
+
+### Verified Fresh-Clone Test
+
+The project was successfully tested from a fresh Google Colab environment using the pinned dependencies, pretrained YOLO11 model, and sample data included in the repository.
+
+The fresh-clone test successfully:
+
+- Installed all dependencies from `requirements.txt`
+- Downloaded and loaded the custom YOLO11 PPE model
+- Processed an included sample image
+- Detected PPE objects
+- Applied helmet-compliance reasoning
+- Produced a compliance decision
+- Generated annotated evidence
+- Generated a JSON report
+- Generated an execution trace
+
+For the verified compliant sample, the agent detected:
+
+```text
+Helmet detections: 2
+No-helmet detections: 0
+Status: COMPLIANT
+```
+
+This verifies the complete end-to-end:
+
+**Perception → Reasoning → Action → Traceability**
+
+workflow from a fresh environment.
 
 ---
 
