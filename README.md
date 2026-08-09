@@ -4,6 +4,12 @@
 
 The **PPE Compliance Check Agent** is an AI-powered computer vision system that automatically monitors Personal Protective Equipment (PPE) compliance in construction and industrial environments. The agent uses a custom-trained **YOLO11** object detection model to identify workers wearing helmets or not wearing helmets, applies reasoning rules to determine compliance status, and generates annotated visual evidence, reports, evaluation metrics, and execution traces.
 
+## Demo Video
+
+A 3–5 minute demonstration of the PPE Compliance Check Agent is available here:
+
+[Watch the PPE Compliance Check Agent Demo](https://drive.google.com/file/d/1S6AsdrTAjp2W4DlZgXM5XqrntxlwXfqw/view?usp=sharing)
+
 ---
 
 ## Project Tier
