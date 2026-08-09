@@ -76,6 +76,8 @@ AI assisted with the reproducibility review of the final project, including:
 - Testing the final PPE Compliance Agent from a fresh repository clone
 - Verifying generation of annotated evidence, JSON reports, and execution traces
 - Cleaning temporary debugging code from the final notebook after verification
+- Creating and testing the single-command `run_agent.py` execution workflow
+- Verifying the final agent processes five sample images and one sample video from a fresh clone
 
 ## Student Contribution
 
