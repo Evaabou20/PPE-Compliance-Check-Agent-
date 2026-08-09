@@ -101,7 +101,8 @@ PPE-Compliance-Check-Agent/
 │
 ├── docs/
 │   ├── AI_usage_log.md
-│   └── architecture.md
+│   ├── architecture.md
+│   └── presentation.pdf
 │
 ├── models/
 │   └── README.md
@@ -122,7 +123,6 @@ PPE-Compliance-Check-Agent/
 ├── README.md
 ├── requirements.txt
 └── run_agent.py
-```
 
 ---
 
