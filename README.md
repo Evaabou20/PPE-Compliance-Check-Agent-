@@ -8,9 +8,11 @@ The **PPE Compliance Check Agent** is an AI-powered computer vision system that 
 
 ## Project Tier
 
-**Tier 3 – Autonomous AI Agent**
+## Project Tier
 
-This project goes beyond basic object detection by integrating perception, reasoning, evaluation, reporting, and monitoring into a complete autonomous workflow. The agent analyzes images and videos, determines PPE compliance, produces structured outputs, and records execution traces for evaluation.
+**Tier 3 – Custom-Trained CV Agent**
+
+This project qualifies for Tier 3 through the custom-trained computer vision model pathway. A custom YOLO11 PPE detection model was trained to detect `helmet` and `no_helmet` classes and integrated into an end-to-end agent workflow for perception, compliance reasoning, evidence generation, evaluation, reporting, monitoring, and trace logging.
 
 ---
 
