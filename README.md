@@ -38,6 +38,7 @@ The PPE Compliance Check Agent automates helmet compliance monitoring using comp
 - JSON report generation
 - Evaluation metrics
 - Agent execution traces
+- Single-command agent execution
 
 ---
 
@@ -117,7 +118,8 @@ PPE-Compliance-Check-Agent/
 │   └── videos/
 │
 ├── README.md
-└── requirements.txt
+├── requirements.txt
+└── run_agent.py
 ```
 
 ---
@@ -139,7 +141,7 @@ PPE-Compliance-Check-Agent/
 
 ## Installation & Reproducibility
 
-The project has been verified in a fresh Google Colab environment to confirm that the core PPE Compliance Agent workflow is reproducible.
+The project has been verified in a fresh Google Colab environment to confirm that the complete PPE Compliance Agent workflow is reproducible.
 
 ### 1. Clone the Repository
 
@@ -156,13 +158,49 @@ Install the pinned project dependencies:
 pip install -r requirements.txt
 ```
 
-### 3. Download the Trained YOLO11 Model
+### 3. Run the Complete Agent
+
+The complete PPE Compliance Check Agent can be executed from the repository root with a single command:
+
+```bash
+python run_agent.py
+```
+
+The runner automatically:
+
+- Loads the custom-trained YOLO11 PPE model from `models/best.pt`
+- Downloads `best.pt` from Google Drive automatically if the model is not already present
+- Loads the representative sample inputs from `data/sample/`
+- Processes the included sample images
+- Applies PPE compliance reasoning
+- Generates annotated evidence and JSON reports
+- Evaluates 10 representative video scenarios
+- Runs continuous video monitoring
+- Generates evaluation metrics
+- Records a complete agent execution trace
+- Saves generated outputs under `results/`
+
+This provides a reproducible end-to-end execution path:
+
+**Input → Perception → Reasoning → Action → Evaluation → Traceability**
+
+### 4. Trained YOLO11 Model
 
 The trained YOLO11 weights (`best.pt`) are hosted externally to keep the repository lightweight.
 
+When `python run_agent.py` is executed, the runner checks for:
+
+```text
+models/best.pt
+```
+
+If the model is not present, it is downloaded automatically from Google Drive.
+
+The model can also be downloaded manually:
+
 [Download best.pt from Google Drive](https://drive.google.com/file/d/1kmJXMGUUwuhxe7IGcxgp0IkeUppP-7lY/view?usp=sharing)
 
-After downloading, place the model at:
+After manual download, place the model at:
 
 ```text
 models/best.pt
@@ -170,13 +208,15 @@ models/best.pt
 
 The model can also be reproduced from scratch by running the dataset setup and training sections of the final notebook.
 
-### 4. Open the Final Notebook
+### 5. Open the Final Notebook
 
-The final project notebook is located at:
+The final project notebook provides the detailed development, training, evaluation, and agent workflow:
 
 ```text
 notebooks/ITAI1378_Final_PPE_Compliance_Check_.ipynb
 ```
+
+The notebook documents the complete project development process, while `run_agent.py` provides the reproducible single-command execution path for the final agent.
 
 The repository includes sample inputs under:
 
@@ -188,33 +228,58 @@ These samples allow the PPE compliance pipeline to be tested without requiring a
 
 ### Verified Fresh-Clone Test
 
-The project was successfully tested from a fresh Google Colab environment using the pinned dependencies, pretrained YOLO11 model, and sample data included in the repository.
+The project was successfully tested from a fresh Google Colab environment using the cloned GitHub repository, pinned dependencies, pretrained YOLO11 model, and included sample data.
+
+The final single-command test was executed with:
+
+```bash
+python run_agent.py
+```
 
 The fresh-clone test successfully:
 
-- Installed all dependencies from `requirements.txt`
-- Downloaded and loaded the custom YOLO11 PPE model
-- Processed an included sample image
-- Detected PPE objects
-- Applied helmet-compliance reasoning
-- Produced a compliance decision
-- Generated annotated evidence
-- Generated a JSON report
-- Generated an execution trace
+- Loaded the custom YOLO11 PPE model
+- Detected the `no_helmet` and `helmet` classes
+- Processed all 3 included sample images
+- Correctly produced `COMPLIANT`, `VIOLATION`, and `REVIEW_REQUIRED` decisions
+- Evaluated 10 representative video scenarios
+- Successfully processed all 10 evaluation scenarios
+- Produced 0 evaluation processing errors
+- Achieved a 100% scenario processing success rate
+- Processed the complete sample monitoring video
+- Generated annotated outputs
+- Generated JSON reports
+- Generated evaluation metrics
+- Generated a complete execution trace
 
-For the verified compliant sample, the agent detected:
+The verified batch image results were:
 
 ```text
-Helmet detections: 2
-No-helmet detections: 0
-Status: COMPLIANT
+compliant_example.jpg: COMPLIANT (helmet=2, no_helmet=0)
+review_required_example.jpg: REVIEW_REQUIRED (helmet=0, no_helmet=0)
+violation_example.jpg: VIOLATION (helmet=2, no_helmet=1)
 ```
 
-This verifies the complete end-to-end:
+The verified system-level evaluation produced:
 
-**Perception → Reasoning → Action → Traceability**
+```text
+Scenarios requested: 10
+Successfully processed: 10
+Processing errors: 0
+Success rate: 100.00%
+```
 
-workflow from a fresh environment.
+The continuous monitoring workflow processed the complete sample video and generated an annotated monitoring video.
+
+The final execution completed with:
+
+```text
+AGENT RUN COMPLETED SUCCESSFULLY
+
+Perception -> Reasoning -> Action -> Traceability complete.
+```
+
+This verifies the complete end-to-end agent workflow from a fresh environment using a single documented execution command.
 
 ---
 
@@ -349,6 +414,7 @@ Throughout this project I learned:
 - How to build an end-to-end computer vision agent that integrates perception, reasoning, and action.
 - How to organize AI projects using a professional GitHub repository structure.
 - How to generate evaluation metrics, execution traces, and project documentation.
+- How to package an AI workflow into a reproducible single-command execution pipeline.
 - The importance of reproducibility, documentation, and systematic evaluation in AI development.
 
 ---
@@ -386,6 +452,10 @@ Additional documentation is available in:
 - `data/README.md`
 - `models/README.md`
 - `notebooks/README.md`
+
+The reproducible agent entry point is:
+
+- `run_agent.py`
 
 ---
 
