@@ -104,7 +104,8 @@ PPE-Compliance-Check-Agent/
 │   └── README.md
 │
 ├── notebooks/
-│   └── ITAI1378_Final_PPE_Compliance_Check_.ipynb
+│   ├── ITAI1378_Final_PPE_Compliance_Check_.ipynb
+│   └── README.md
 │
 ├── results/
 │   ├── evaluation/
@@ -117,7 +118,6 @@ PPE-Compliance-Check-Agent/
 │
 ├── README.md
 └── requirements.txt
-```
 
 ---
 
@@ -249,6 +249,40 @@ The evaluation generated:
 - Agent execution traces
 
 Representative outputs are available in the `results` folder.
+
+### Success and Failure Analysis
+
+The evaluation included successful detections as well as challenging cases that revealed limitations of the perception component.
+
+#### Successful Cases
+
+The agent successfully identified both compliant and violation scenarios. For example, **Scenario 4** detected helmet and no-helmet conditions in the same construction scene and correctly classified the overall status as `VIOLATION`.
+
+**Scenarios 3 and 10** also demonstrated graceful handling of uncertain or irrelevant visual input. When no helmet or no-helmet evidence was detected, the reasoning system returned `REVIEW_REQUIRED` rather than forcing an unsupported compliance decision.
+
+#### Failure Case 1 – Partial Detection in a Crowded Scene
+
+**Scenario 5 (Frame 931)** contains multiple visible workers in a construction environment. The YOLO11 model detected two `no_helmet` instances and the agent correctly classified the scene as `VIOLATION`. However, not every visible worker received a PPE detection.
+
+This demonstrates a limitation of the perception component when multiple workers appear with partial occlusion, varied poses, and construction structures blocking portions of the scene. Although the final safety decision was correct, incomplete detections could affect worker-level compliance analysis.
+
+#### Failure Case 2 – Small and Distant PPE Objects
+
+**Scenario 9 (Frame 1863)** contains workers at a significant distance from the camera. The PPE objects occupy only a small portion of the image, and one helmet detection had relatively low confidence.
+
+This scenario demonstrates that PPE detection becomes less reliable when workers and helmets appear very small or distant within a cluttered scene. Higher-resolution input, additional training examples containing distant workers, and improved small-object detection could improve performance.
+
+### Failure Analysis Summary
+
+These cases show that the agent can complete the end-to-end workflow while the underlying perception model still has limitations. The most important observed challenges were:
+
+- Partial occlusion
+- Multiple workers in complex scenes
+- Small PPE objects
+- Long camera distance
+- Visual clutter
+
+Future model training could address these limitations by adding more diverse examples of crowded scenes, partially occluded workers, and small or distant PPE objects.
 
 ---
 
