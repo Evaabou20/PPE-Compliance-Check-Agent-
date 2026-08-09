@@ -241,8 +241,8 @@ The fresh-clone test successfully:
 
 - Loaded the custom YOLO11 PPE model
 - Detected the `no_helmet` and `helmet` classes
-- Processed all 3 included sample images
-- Correctly produced `COMPLIANT`, `VIOLATION`, and `REVIEW_REQUIRED` decisions
+- Processed all 5 included sample images
+- Produced `COMPLIANT`, `VIOLATION`, and `REVIEW_REQUIRED` decisions
 - Evaluated 10 representative video scenarios
 - Successfully processed all 10 evaluation scenarios
 - Produced 0 evaluation processing errors
@@ -257,8 +257,10 @@ The verified batch image results were:
 
 ```text
 compliant_example.jpg: COMPLIANT (helmet=2, no_helmet=0)
+compliant_example_2.jpg: COMPLIANT (helmet=1, no_helmet=0)
 review_required_example.jpg: REVIEW_REQUIRED (helmet=0, no_helmet=0)
 violation_example.jpg: VIOLATION (helmet=2, no_helmet=1)
+violation_example_2.jpg: VIOLATION (helmet=1, no_helmet=1)
 ```
 
 The verified system-level evaluation produced:
@@ -270,19 +272,22 @@ Processing errors: 0
 Success rate: 100.00%
 ```
 
-The continuous monitoring workflow processed the complete sample video and generated an annotated monitoring video.
+The continuous monitoring workflow processed the complete sample video:
+
+```text
+Frames written: 2098
+Frames analyzed: 210
+```
+
+The workflow successfully generated an annotated monitoring video and a complete agent execution trace.
 
 The final execution completed with:
 
 ```text
-AGENT RUN COMPLETED SUCCESSFULLY
-
 Perception -> Reasoning -> Action -> Traceability complete.
 ```
 
 This verifies the complete end-to-end agent workflow from a fresh environment using a single documented execution command.
-
----
 
 ## Evaluation & Results
 
