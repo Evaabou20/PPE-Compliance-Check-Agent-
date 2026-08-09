@@ -121,6 +121,7 @@ PPE-Compliance-Check-Agent/
 ├── README.md
 ├── requirements.txt
 └── run_agent.py
+```
 
 ---
 
@@ -158,7 +159,7 @@ Install the pinned project dependencies:
 pip install -r requirements.txt
 ```
 
-### 3. Run the Complete Agent
+### 3. Quick Start – Run the Complete Agent
 
 The complete PPE Compliance Check Agent can be executed from the repository root with a single command:
 
@@ -449,6 +450,7 @@ Additional documentation is available in:
 
 - `docs/AI_usage_log.md`
 - `docs/architecture.md`
+- `docs/presentation.pdf`
 - `data/README.md`
 - `models/README.md`
 - `notebooks/README.md`
