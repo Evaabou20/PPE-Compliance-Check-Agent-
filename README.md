@@ -74,7 +74,7 @@ Reports • Metrics • Traces • Annotated Outputs
 
 The project uses a custom PPE dataset for training, validation, and evaluation.
 
-The GitHub repository includes representative sample images and videos that demonstrate the complete agent workflow while keeping the repository lightweight.
+The GitHub repository includes five representative sample images and one sample video that demonstrate the complete agent workflow while keeping the repository lightweight.
 
 Sample data is available in:
 
@@ -288,6 +288,8 @@ Perception -> Reasoning -> Action -> Traceability complete.
 ```
 
 This verifies the complete end-to-end agent workflow from a fresh environment using a single documented execution command.
+
+---
 
 ## Evaluation & Results
 
