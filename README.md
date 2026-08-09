@@ -118,6 +118,7 @@ PPE-Compliance-Check-Agent/
 │
 ├── README.md
 └── requirements.txt
+```
 
 ---
 
@@ -358,7 +359,7 @@ AI tools were used throughout the project to assist with debugging, code explana
 
 A detailed record of AI-assisted development is available in:
 
-```
+```text
 docs/AI_usage_log.md
 ```
 
@@ -384,6 +385,7 @@ Additional documentation is available in:
 - `docs/architecture.md`
 - `data/README.md`
 - `models/README.md`
+- `notebooks/README.md`
 
 ---
 
